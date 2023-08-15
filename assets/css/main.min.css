@@ -17736,7 +17736,7 @@ footer .bottom-footer .social-links {
   -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  height: 40%;
+  height: 60%;
   padding: 50px;
   opacity: 0;
   transform: translateX(-100%);
@@ -18617,7 +18617,7 @@ footer .bottom-footer .social-links {
     padding: 57px 50px 55px;
   }
   footer {
-    padding: 219px 0 40px;
+    padding: 80px 0 40px;
   }
   .meta li {
     margin-right: 5px;
@@ -19539,3 +19539,18 @@ footer .bottom-footer .social-links {
     top: -90px;
   }
 }
+
+.teacher-in{
+  display: block;
+  color: #155799;
+  font-size: 14.23px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0;
+  margin-top: 25px;
+  padding: 0 20px;
+  text-align: center;
+
+}
+
+  

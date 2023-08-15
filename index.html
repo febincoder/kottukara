@@ -584,6 +584,7 @@
                       <div class="form-group">
                         <textarea
                           name="message"
+                          id="message"
                           placeholder="Message"
                         ></textarea>
                       </div>
@@ -598,21 +599,22 @@
     </section>
     
     <script>
-    document.getElementById("sendMessage").addEventListener("click", function() {
-      var name = encodeURIComponent(document.getElementById("name").value);
-      var selectedClass = encodeURIComponent(document.getElementById("class").value);
-      var division = encodeURIComponent(document.getElementById("division").value);
-    
-      if (name && selectedClass && division) {
-        var message = "Name: " + name + "%0A" + "Class: " + selectedClass + "%0A" + "Division: " + division;
-        var whatsappLink = "https://api.whatsapp.com/send?phone=7559893612&text=" + message;
-    
-        window.open(whatsappLink, "_blank");
-      } else {
-        alert("Please fill out all required fields.");
-      }
-    });
-    </script>
+      document.getElementById("sendMessage").addEventListener("click", function() {
+        var name = encodeURIComponent(document.getElementById("name").value);
+        var selectedClass = encodeURIComponent(document.getElementById("class").value);
+        var division = encodeURIComponent(document.getElementById("division").value);
+        var message = encodeURIComponent(document.getElementById("message").value); 
+      
+        if (name && selectedClass && division) {
+          var fullMessage = "Name: " + name + "%0A" + "Class: " + selectedClass + "%0A" + "Division: " + division + "%0A" + "Message: " + message;  // Adjusted line
+          var whatsappLink = "https://api.whatsapp.com/send?phone=7559893612&text=" + fullMessage;
+      
+          window.open(whatsappLink, "_blank");
+        } else {
+          alert("Please fill out all required fields.");
+        }
+      });
+  </script>
     
     
       
